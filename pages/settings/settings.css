@@ -1,0 +1,179 @@
+/* Apply box-sizing globally for layout consistency */
+* {
+  box-sizing: border-box;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #f9f9f9; /* Optional: light background */
+  padding: 30px;
+  border-radius: 16px;        /* 🎯 Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Optional: soft shadow */
+  max-width: 600px;
+  margin: 40px auto;
+  margin-top: -50px;
+}
+
+.profile {
+  width: 100%;
+  max-width: 400px;          /* ✅ limit size */
+  /* margin-block: 50px; */
+  text-align: left;          /* ✅ left-align text */
+  background-color: #fff;    /* Optional: card style */
+  padding: 20px;             /* Optional: spacing inside */
+  border-radius: 12px;       /* Optional: rounded edges */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Optional: subtle shadow */
+  padding-left: 75px;
+}
+
+/* Logout button styling (red) */
+.settings-container .logout-btn {
+  background-color: #c0392b;
+  color: white;
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.settings-container .logout-btn:hover {
+  background-color: #a93226;
+}
+
+/* Logout confirmation modal buttons */
+.modal-actions .confirm-logout {
+  background-color: #c0392b;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.modal-actions .confirm-logout:hover {
+  background-color: #a93226;
+}
+
+.modal-actions .cancel-logout {
+  background-color: #bdc3c7;
+  color: #333;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.modal-actions .cancel-logout:hover {
+  background-color: #aeb6bf;
+}
+ 
+
+/* /////////////////////////////////////////////////////////////////////////////// */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0; /* shorthand for top, right, bottom, left: 0 */
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem; /* allows some space on mobile */
+  overflow: auto; /* allow scroll if modal is taller than screen */
+}
+
+
+.modal-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh; /* prevent it from going off screen */
+  overflow-y: auto; /* scroll inside if needed */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.3s ease;
+}
+
+
+/* Modal title */
+.modal-container h3 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+/* Style form and its elements */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.modal-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.modal-form input {
+  margin-top: 0.35rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+.modal-form input:focus {
+  border-color: #ED6C21;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(237, 108, 33, 0.15);
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.modal-actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.modal-actions button[type="submit"] {
+  background-color: #ED6C21;
+  color: white;
+}
+
+.modal-actions button[type="submit"]:hover {
+  background-color: #c15515;
+}
+
+.modal-actions button[type="button"] {
+  background-color: #ddd;
+  color: #333;
+}
+
+.modal-actions button[type="button"]:hover {
+  background-color: #bbb;
+}

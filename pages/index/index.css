@@ -1,0 +1,17 @@
+body{
+    margin: 100px;
+    padding: 30px;
+    font-size: 17px;
+
+}
+
+h1{
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.filler{
+    margin: 20px;
+    padding: 10px;
+}

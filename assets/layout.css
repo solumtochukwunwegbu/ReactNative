@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fixed Bottom Dashboard with Dropdown */
+.dashboard {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ED6C21;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: transform 0.3s ease;
+  transform: translateY(0%);
+  z-index: 1000;
+}
+
+.dashboard.closed {
+  transform: translateY(85%); /* Show only the toggle */
+}
+
+.toggle-button {
+  background-color: #ED6C21;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+}
+.toggle-button:hover {
+  background-color: #ED6C21;
+}
+
+.dash-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 40px 30px;
+  font-size: 15px;
+  position: relative;
+}
+
+.dash-container::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 30px;
+  right: 30px;
+  height: 1px;
+  background-color: white;
+}
+
+
+.dash-item a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+ 
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.dash-item:hover {
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 0.8rem;
+  align-items: center;
+  padding: 25px;
+}
+
+
+.logo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  width: 200px;
+  justify-self: center;
+  margin-bottom: 100px;
+  margin-top: -50px;
+}
+
+.logo{
+  max-width: 100%;
+  height: auto;
+}

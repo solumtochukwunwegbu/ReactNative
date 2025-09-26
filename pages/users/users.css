@@ -1,0 +1,115 @@
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  font-family: sans-serif;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.tab {
+  flex: 0 0 auto;
+  width: 300px;
+  padding: 10px 20px;
+  background: #ED6C21;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.tab:hover {
+  background: #6d3901;
+}
+
+.tab.active {
+  background: #ED6C21;
+  color: white;
+}
+
+.form {
+  max-width: 500px;
+  margin: 50px auto 0;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+}
+
+.form label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form button {
+  padding: 10px 20px;
+  background-color: #ED6C21;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.form button:hover {
+  background: #6d3901;
+  color: white;
+}
+
+.user-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.user-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  text-align: left;
+  color: black;
+}
+
+.user-info {
+  flex: 1;
+  text-align: left;
+}
+
+.status-toggle {
+  flex-shrink: 0;
+   
+}
+
+.status-toggle select {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  color: black;
+}
